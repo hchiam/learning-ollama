@@ -1,47 +1,25 @@
-# Learning template [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://github.com/hchiam/learning-template/blob/main/LICENSE)
+# Learning [Ollama](https://ollama.com)
 
 Just one of the things I'm learning. https://github.com/hchiam/learning
 
-(To use this template fast with [`gh` CLI](https://github.com/hchiam/learning-gh), you can run [`gh repo create --template learning-template learning-...`](https://cli.github.com/manual/gh_repo_create) or [set up a custom shortcut CLI command](https://github.com/hchiam/learning-bash-scripts/blob/main/gh-cli-create-learning-repo-from-template.sh).)
+## Setup
 
-(To create a convenience script repo, use this template instead: https://github.com/hchiam/convenience)
+1. ollama.com website download app to install ollama command
+2. `ollama run llama2` automatically downloads llama2 model if needed, and lets you talk with the model offline directly in the terminal, with the ollama app running in the background (otherwise to just use another terminal window to run ollama in the background: `ollama serve`)
 
-(To create a website fast, use a code generator like [`create-next-app`](https://github.com/hchiam/learning-nextjs), [`sapper`](https://github.com/hchiam/learning-sapper), a [svelte template](https://github.com/sveltejs/template), [`yo`](https://yeoman.io/generators), or my [project-template](https://github.com/hchiam/project-template))
+## Extra notes
 
-(Use the redirect template https://github.com/hchiam/learning-redirect to enhance discoverability. Or [set up a custom shortcut CLI command](https://github.com/hchiam/learning-bash-scripts/blob/main/gh-cli-create-learning-redirect-repo-from-template.sh))
+- in .bash_profile: `alias llm='ollama run llama2'`
+- to read a local file: `ollama run llama2 "Summarize this file: $(cat scratchpad.md)"`
+- or with the custom alias: `llm "Summarize this file: $(cat scratchpad.md)"`
+- or run ollama with python code: https://github.com/hchiam/local-llms-analyse-finance/blob/main/categorize_expenses.ipynb
+- but overall, it seems:
+  - running llama2 on ollama has limited speed
+  - running llama2 on ollama has limited prompt/input size, which would require chopping up the input
 
-<!-- Add reference link(s) here -->
+## Further resources
 
-## From scratch
-
-Using [`yarn`](https://github.com/hchiam/learning-yarn):
-
-```bash
-yarn add
-```
-
-Or with `npm`:
-
-```bash
-npm install
-```
-
-And then:
-
-```bash
-
-```
-
-## Starting by testing out this repo <!-- Replace "template"s and "# and then ..."s in this section -->
-
-Using [`yarn`](https://github.com/hchiam/learning-yarn): (triple-click to select all)
-
-```bash
-git clone https://github.com/hchiam/learning-template.git && cd learning-template && yarn; # and then ...
-```
-
-Or with `npm`: (triple-click to select all)
-
-```bash
-git clone https://github.com/hchiam/learning-template.git && cd learning-template && npm install; # and then ...
-```
+- https://youtu.be/WxYC9-hBM_g?feature=shared (around 18:08) (aside: consider privategpt too: https://dev.to/docteurrs/installing-privategpt-on-wsl-with-gpu-support-1m2a and https://docs.privategpt.dev/overview/welcome/introduction)
+- https://www.youtube.com/watch?v=h_GTxRFYETY
+- https://ollama.com
+- to customize with a Modelfile (temperature and system message/prompt): https://github.com/ollama/ollama?tab=readme-ov-file#customize-a-prompt
