@@ -17,7 +17,7 @@ Ollama makes it easy to run LLMs offline/locally/privately on your computer.
 - or with the custom alias: `llm "Summarize this file: $(cat scratchpad.md)"`
 - or run ollama with python code: https://github.com/hchiam/local-llms-analyse-finance/blob/main/categorize_expenses.ipynb
 - but overall, it seems:
-  - running llama2 on ollama has limited speed
+  - running llama2 on ollama has limited speed (unless your computer has GPUs that can Ollama can use for GPU acceleration)
   - running llama2 on ollama has limited prompt/input size, which would require chopping up the input
 
 ## Further resources
