@@ -29,3 +29,26 @@ Ollama makes it easy to run LLMs offline/locally/privately on your computer.
 - https://www.youtube.com/watch?v=h_GTxRFYETY
 - https://ollama.com
 - to customize with a Modelfile (temperature and system message/prompt): https://github.com/ollama/ollama?tab=readme-ov-file#customize-a-prompt
+
+## Example uses
+- [use ollama to set up privateGPT](https://github.com/hchiam/learning-privateGPT)
+- [use ollama to set up Gemma2 to run with local RAG using LangChain](https://www.youtube.com/watch?v=daZOrbMs61I) with [samwit's code to run](https://github.com/samwit/langchain-tutorials/tree/main/2024/gemma2_local_rag) (or [my fork of that repo](https://github.com/hchiam/langchain-tutorials-samwit/tree/main/2024/gemma2_local_rag)):
+    - ```sh
+      pip install langchain
+      # langchain_community might need to installed with pip3 install langchain-community langchain-core
+      ```
+    - ```sh
+      ollama run gemma2 # 5.4 GB when i tried
+      ollama pull nomic-embed-text # 274 MB
+      ollama list
+      ```
+    - ```sh
+      python indexer.py
+      ```
+    - ```sh
+      python ollama_gemma2_rag_debugging.py
+      ```
+      or
+      ```sh
+      python ollama_gemma2_rag_simple.py
+      ```
